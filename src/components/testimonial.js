@@ -39,7 +39,7 @@ const WrapperTestimonial = styled.div`
 
   background-color: #fffff;
 
-  padding: 100px 0 100px 0;
+  padding: 100px 0 70px 0;
 `
 const Wrap = styled.div`
   position: relative;
@@ -59,9 +59,51 @@ const Testimonial = () => (
       showThumbs={false}
       showStatus={false}
       autoPlay={true}
-      interval={12100}
+      interval={6100}
       showIndicators={false}
     >
+      <Testimon>
+        <div>
+          <Mateimg />
+        </div>
+        <div>
+          Škola trčanja mi je u potpunosti promijenila lifestyle. Postao sam
+          aktivna osoba, sportaš rekreativac, trkač na duge pruge, a prije samo
+          3 godine bio sam bez energije, bez snage i što je najvažnije bez
+          poleta i elana.
+        </div>
+
+        <div
+          style={{
+            marginTop: "30px",
+            textAlign: "center",
+            fontSize: "1.2rem",
+          }}
+        >
+          <strong>Mate (47)</strong>
+        </div>
+      </Testimon>
+      <Testimon>
+        <div>
+          <Mateimg />
+        </div>
+        <div>
+          Škola trčanja mi je u potpunosti promijenila lifestyle. Postao sam
+          aktivna osoba, sportaš rekreativac, trkač na duge pruge, a prije samo
+          3 godine bio sam bez energije, bez snage i što je najvažnije bez
+          poleta i elana.
+        </div>
+
+        <div
+          style={{
+            marginTop: "30px",
+            textAlign: "center",
+            fontSize: "1.2rem",
+          }}
+        >
+          <strong>Mate (47)</strong>
+        </div>
+      </Testimon>
       <Testimon>
         <div>
           <Mateimg />

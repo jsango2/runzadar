@@ -19,7 +19,7 @@ exports.createPages = async ({ graphql, actions }) => {
     `
       {
         objekt: wpgraphql {
-          posts {
+          posts(first: 50) {
             edges {
               node {
                 title

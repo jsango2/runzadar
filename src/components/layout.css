@@ -88,12 +88,19 @@ html {
 
 .heroTitle {
   font-family: "Montserrat", sans-serif;
-  font-size: 4rem;
+  font-size: 2.5rem;
   line-height: 6rem;
   font-weight: 700;
   margin-left: 100px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   color: white;
+  z-index: 3;
+}
+.heroText {
+  font-size: 1rem;
+  color: white;
+  margin-left: 100px;
+  margin-bottom: 1rem;
   z-index: 3;
 }
 
@@ -239,11 +246,11 @@ html {
 }
 
 .jedan {
-  background-image: url("../images/sm_1\ \(1\).jpeg");
+  background-image: url("../images/terminiBack.jpeg");
   background-position: center;
 }
 .dva {
-  background-image: url("../images/sm_1\ \(2\).jpg");
+  background-image: url("../images/putovanjaBack.jpg");
   background-position: center;
 }
 .tri {
@@ -259,17 +266,17 @@ html {
   background-position: center;
 }
 .sest {
-  background-image: url("../images/sm_1\ \(6\).jpg");
+  background-image: url("../images/uspjesiBack.jpg");
   background-position: center;
 }
 
 .jedanF {
-  background-image: url("../images/sm_1\ \(7\).jpg");
+  background-image: url("../images/termini.jpg");
   background-position: center;
   background-size: cover;
 }
 .dvaF {
-  background-image: url("../images/sm_1\ \(8\).jpg");
+  background-image: url("../images/header.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -284,12 +291,12 @@ html {
   background-size: cover;
 }
 .petF {
-  background-image: url("../images/1\ \(11\).jpg");
+  background-image: url("../images/gdje.jpg");
   background-position: center;
   background-size: cover;
 }
 .sestF {
-  background-image: url("../images/sm_1\ \(5\).jpg");
+  background-image: url("../images/uspjesi.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -300,7 +307,7 @@ html {
 .sekcijaFooter {
   width: 100%;
   height: auto;
-  padding: 50px;
+  padding: 30px;
   background-color: #1056b1ec;
   display: flex;
   color: white;
@@ -308,9 +315,12 @@ html {
   align-items: center;
   justify-content: center;
 }
-.sekcijaFooter a:link {
-  color: honeydew;
-  font-weight: 500;
+.sekcijaFooter a {
+  color: rgb(110, 177, 231) !important;
+  font-weight: 400;
+}
+.column {
+  margin-bottom: 15px !important;
 }
 
 .column {
@@ -318,9 +328,9 @@ html {
   flex-direction: column;
   width: 80%;
 }
-.column a {
+/* .column a {
   color: rgb(96, 96, 96);
-}
+} */
 .footer-text {
   text-align: left;
 }
@@ -346,14 +356,17 @@ html {
   color: white;
   padding-top: 10rem !important;
 }
-a,
-a:link {
+
+/* .navlinks a:link {
   text-decoration: none;
   color: rgb(70, 67, 67) !important;
-}
+} */
 .navlinks a:link {
   margin: 0 20px;
 }
+/* .footer-link {
+  color: #243d52;
+} */
 .stupac h3 {
   text-align: center;
 }
@@ -371,7 +384,7 @@ body {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='3600' preserveAspectRatio='none' viewBox='0 0 1440 3600'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1392%26quot%3b)' fill='none'%3e%3crect width='1440' height='3600' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M-75.4 562.45 a261.95 261.95 0 1 0 523.9 0 a261.95 261.95 0 1 0 -523.9 0z' fill='rgba(28%2c 83%2c 142%2c 0.04)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M539.53 3019.09 a247.09 247.09 0 1 0 494.18 0 a247.09 247.09 0 1 0 -494.18 0z' fill='rgba(28%2c 83%2c 142%2c 0.04)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M339.146%2c897.959C415.385%2c897.092%2c486.198%2c858.836%2c525.114%2c793.272C564.867%2c726.299%2c568.721%2c643.282%2c530.638%2c575.346C491.722%2c505.923%2c418.709%2c459.563%2c339.146%2c461.52C262.532%2c463.405%2c201.538%2c517.962%2c163.306%2c584.382C125.178%2c650.622%2c108.321%2c730.924%2c145.703%2c797.588C183.785%2c865.499%2c261.291%2c898.845%2c339.146%2c897.959' fill='rgba(28%2c 83%2c 142%2c 0.04)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1181.494%2c1483.994C1237.853%2c1487.114%2c1299.649%2c1480.656%2c1331.354%2c1433.957C1366.388%2c1382.355%2c1366.821%2c1312.422%2c1333.979%2c1259.398C1302.616%2c1208.763%2c1241.015%2c1189.83%2c1181.494%2c1192.01C1126.066%2c1194.04%2c1073.746%2c1221.201%2c1047.2%2c1269.901C1021.672%2c1316.733%2c1029.519%2c1373.631%2c1057.862%2c1418.815C1084.395%2c1461.114%2c1131.638%2c1481.234%2c1181.494%2c1483.994' fill='rgba(28%2c 83%2c 142%2c 0.04)' class='triangle-float1'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1392'%3e%3crect width='1440' height='3600' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
   color: hsla(0, 0%, 11%, 0.8);
   font-family: "Montserrat", sans-serif;
-  font-weight: normal;
+  font-weight: 300;
   word-wrap: break-word;
   font-kerning: normal;
   max-width: 1400px;
@@ -793,7 +806,7 @@ blockquote {
   margin-bottom: 1.45rem;
 }
 form {
-  margin-left: 0;
+  margin-left: 2rem !important;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -821,6 +834,15 @@ iframe {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+}
+.logoImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logoImage img {
+  width: 300px;
+  margin: 30px auto 90px auto;
 }
 address {
   margin-left: 0;
@@ -968,13 +990,17 @@ pre tt:after {
     color: white;
     z-index: 3;
   }
+  .heroText {
+    margin-left: 60px;
+  }
 }
 @media only screen and (max-width: 650px) {
   .ZadarNightRunColumn {
     display: none;
   }
   .formular {
-    margin-left: 0;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .stupci2 {
     display: flex;
@@ -997,13 +1023,16 @@ pre tt:after {
   }
   .heroTitle {
     font-family: "Montserrat", sans-serif;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 3rem;
     font-weight: 700;
     margin-left: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     color: white;
     z-index: 3;
+  }
+  .heroText {
+    margin-left: 30px;
   }
   .headerTitle {
     font-family: "Montserrat";
@@ -1011,5 +1040,8 @@ pre tt:after {
     color: hsla(208, 3.66%, 66.79%, 1);
     letter-spacing: 2.3px;
     font-size: 15px !important;
+  }
+  .logoImage img {
+    width: 200px;
   }
 }

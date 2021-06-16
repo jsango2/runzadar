@@ -37,7 +37,7 @@ const Stupac = styled.div`
 `
 
 const Onama = () => (
-  <OnamaWrap>
+  <OnamaWrap id="onama">
     <OnamaBody>
       <Stupci>
         <div>
@@ -63,7 +63,7 @@ const Onama = () => (
               Zadar. Predsjednik Udruge kondicijskih trenera zadarske županije.
               “
               <em>
-                Želja nsam je pružiti priliku Zadranima da nauče više o osnovama
+                Želja nam je pružiti priliku Zadranima da nauče više o osnovama
                 trčanja kroz provjereni program i kroz stručno vodstvo. Velik
                 broj zadrana trči ali nije zadovoljno omjerom uloženog i
                 postignutog. Ovo je prilika da svoje vrijeme za sport ulože na
@@ -89,7 +89,7 @@ const Onama = () => (
               fakulteta sa usmjerenjem kondicijske pripreme sportaša. Bavi se
               triatlonom već 6 godina i postiže zapažene rezultate. Višestruki
               je finisher na Ironman natjecanjima. Natječe se i na brojnim
-              dugoprugaškim trkačkim natjecanjima u hrvatskoj. Trener je u
+              dugoprugaškim trkačkim natjecanjima u Hrvatskoj. Trener je u
               triatlon klubu Zadar.
               <br />‍
               <em>

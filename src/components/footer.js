@@ -19,8 +19,8 @@ const Footer = () => (
           <div className="column w-col w-col-4">
             <h5>KORISNI LINKOVI</h5>
             <a
-              href="https://www.wingsforlifeworldrun.com/hr/en/zadar/"
-              className="footer-link"
+              href="http://www.wingsforlifeworldrun.com/hr/en/zadar/"
+              className="footer-lik"
             >
               Wings for life World Run
             </a>
@@ -30,11 +30,11 @@ const Footer = () => (
             <a href="http://www.trcanje.hr" className="footer-link">
               Trčanje.hr
             </a>
-            <a href="https://www.runnersworld.com" className="footer-link">
+            <a href="http://www.runnersworld.com" className="footer-link">
               Runner&#x27;s World
             </a>
             <a
-              href="https://www.runzadar.com/christmasrun"
+              href="http://www.runzadar.com/christmasrun"
               className="footer-link"
             >
               Zadar Christmas Run
@@ -44,13 +44,13 @@ const Footer = () => (
             <h5>POVEŽITE SE</h5>
 
             <a
-              href="https://www.facebook.com/skolatrcanjazadar"
+              href="http://www.facebook.com/skolatrcanjazadar"
               className="footer-link with-icon"
             >
               Facebook
             </a>
             <a
-              href="https://www.instagram.com/skola_trcanja_zadar/"
+              href="http://www.instagram.com/skola_trcanja_zadar/"
               className="footer-link with-icon"
             >
               Instagram

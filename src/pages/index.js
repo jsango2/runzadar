@@ -17,6 +17,7 @@ import Testimonial from "./../components/testimonial"
 import StyledBackgroundSection from "../components/styledBackgroundSection"
 import Bg from "../images/background-01.png"
 import "bootstrap/dist/css/bootstrap.min.css"
+import Logo from "../images/logoRunZd.png"
 
 // import sal from "sal.js"
 import "sal.js/dist/sal.css"
@@ -54,13 +55,16 @@ const IndexPage = () => {
         <StyledBackgroundSection />
       </div>
       <Testimonial />
+      <div className="container logoImage">
+        <img src={Logo} alt="logo" />
+      </div>
       <Raspored />
-      {/* <ZastoSKola /> */}
+      <ZastoSKola />
       <Onama />
 
       {/* <Video /> */}
       {/* <Form /> */}
-      <Utrke />
+      {/* <Utrke /> */}
       <Footer />
     </Layout>
   )

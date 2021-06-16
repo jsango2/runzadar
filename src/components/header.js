@@ -4,9 +4,7 @@ import React from "react"
 import Headroom from "react-headroom"
 import scrollTo from "gatsby-plugin-smoothscroll"
 import styled from "styled-components"
-import { GiHamburgerMenu } from "react-icons/Gi"
 import { Nav, Navbar } from "react-bootstrap"
-import Logo from "../images/logoRunZd.png"
 
 const NavigationBar = styled.div`
   position: relative;
@@ -66,7 +64,7 @@ const Header = ({ siteTitle }) => (
   >
     <header>
       <Navbar bg="light" variant="light" expand="lg">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand>
           {/* <img
             alt=""
             src={Logo}
@@ -74,15 +72,34 @@ const Header = ({ siteTitle }) => (
             height="40"
             className="d-inline-block align-top"
           />{" "} */}
-          Škola trčanja Zadar
+          <Link style={{ color: "grey", fontWeight: "500" }} to="/">
+            Škola trčanja Zadar
+          </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="navlinks ml-auto">
-            <Link to="../">Home</Link>
-            <Link to="/onama">O nama</Link>
-            <Link to="/blog">Blog</Link>
-            <Link to="#pricing">Zašto Škola trčanja</Link>
+            <Link style={{ color: "grey" }} to="../">
+              Home
+            </Link>
+
+            <Link
+              style={{ color: "grey" }}
+              to="/"
+              onClick={() => scrollTo("#onama")}
+            >
+              O nama
+            </Link>
+            <Link style={{ color: "grey" }} to="/blog">
+              Blog
+            </Link>
+            <Link
+              style={{ color: "grey" }}
+              to="/"
+              onClick={() => scrollTo("#zastoSkola")}
+            >
+              Zašto Škola trčanja
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>

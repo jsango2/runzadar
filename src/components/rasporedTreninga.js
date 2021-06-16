@@ -1,11 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import Trkaci from "../images/runners2.jpeg"
-import RivaRun from "../images/rivaRun.jpg"
-import Nin from "../images/nin.jpg"
-import Wfl from "../images/wfl.jpg"
-import WC from "../images/WC.jpg"
-import Prvi from "../images/prvi.jpg"
+
 import CardFlip from "./CardFlip"
 
 const RasporedStyle = styled.div`
@@ -17,7 +12,7 @@ const RasporedStyle = styled.div`
   width: 100%;
   height: auto;
   text-align: center;
-  padding-bottom: 100px;
+  padding-bottom: 30px;
   ${"" /* background-color: rgba(236, 236, 236, 0.327); */}
   z-index: 10;
 
@@ -166,7 +161,7 @@ const Raspored = () => (
       <div className="singleRaspored">
         {" "}
         <CardFlip
-          front="Utrke"
+          front="Sportska putovanja"
           back="Redovito odlazimo na utrke po cijeloj Europi!"
           klasaBack="dva"
           klasaFront="dvaF"

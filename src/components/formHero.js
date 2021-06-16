@@ -1,6 +1,10 @@
 import React from "react"
 import { Form, Button, Col } from "react-bootstrap"
 
+const SERVICE_ID = "service_roo2536"
+const TEMPLATE_ID = "template_5y3mfyf"
+const USER_ID = "user_Z51AzFNUZsmRrjI403BUX"
+
 function FormHero() {
   return (
     <div
@@ -14,11 +18,13 @@ function FormHero() {
         name="heroForm"
         method="POST"
         data-netlify="true"
+        action="/success"
       >
         <input type="hidden" name="heroForm" value="heroForm" />
         <Form.Row>
           <Col>
             <Form.Control
+              size="sm"
               name="ime"
               className="mb-1 formPolje text-white"
               type="text"
@@ -28,6 +34,7 @@ function FormHero() {
           <Col>
             {" "}
             <Form.Control
+              size="sm"
               name="prezime"
               className="mb-1 formPolje text-white"
               type="text"
@@ -38,6 +45,7 @@ function FormHero() {
         <Form.Row>
           <Col>
             <Form.Control
+              size="sm"
               name="email"
               className="formPolje text-white"
               type="email"
@@ -46,6 +54,7 @@ function FormHero() {
           </Col>
           <Col>
             <Form.Control
+              size="sm"
               name="god rođ"
               as="select"
               className=" formPolje text-white"
@@ -62,13 +71,18 @@ function FormHero() {
         </Form.Row>
         <Form.Group className="mt-2" controlId="formBasicCheckbox">
           <Form.Check
-            style={{ color: "white" }}
+            style={{ color: "white", marginLeft: "20px" }}
             name="Želim primati obavijesti škole"
             type="checkbox"
-            label="Želim primati obavijesti Škole trčanja Zadar"
+            label="Želim primati obavijesti Škole"
           />
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button
+          style={{ marginLeft: "20px" }}
+          variant="primary"
+          type="submit"
+          size="sm"
+        >
           Pošalji prijavu
         </Button>
       </Form>

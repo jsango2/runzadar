@@ -3,7 +3,6 @@ import { graphql, useStaticQuery } from "gatsby"
 import styled from "styled-components"
 
 import BackgroundImage from "gatsby-background-image"
-import Buttoncta from "./buttonCta"
 import FormHero from "./formHero"
 
 const BackgroundSection = ({ className }) => {
@@ -40,9 +39,10 @@ const BackgroundSection = ({ className }) => {
     >
       <Overlay />
       <div className="heroTitle">
-        Prijavi se:
+        Prijavi se
         {/* Sa osmijehom <br /> do cilja */}
       </div>{" "}
+      <div className="heroText">Vaši podaci za upis Škole trčanja Zadar:</div>{" "}
       <FormHero />
       {/* <Buttoncta /> */}
     </BackgroundImage>

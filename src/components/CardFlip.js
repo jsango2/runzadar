@@ -22,7 +22,7 @@ function CardFlip({ front, back, klasaBack, klasaFront }) {
           transform,
         }}
       >
-        <h1 style={{ color: "white" }}>{front}</h1>{" "}
+        <h2 style={{ color: "white" }}>{front}</h2>{" "}
       </a.div>
       <a.div
         className={` c front ${klasaBack}`}

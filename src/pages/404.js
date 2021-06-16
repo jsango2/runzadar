@@ -1,13 +1,29 @@
 import React from "react"
+import Footer from "../components/footer"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
+import Bart from "../images/bart.png"
 const NotFoundPage = () => (
   <Layout>
     <SEO title="404: Not found" />
-    <h1>404: Not Found</h1>
-    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+    <div
+      style={{
+        height: "500px",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        textAlign: "center",
+      }}
+    >
+      <div>
+        <img src={Bart} width="100px" alt="bart" />{" "}
+      </div>
+      <h1>404: Stranica nije pronađena</h1>
+      <p>Upisali ste adresu koja ne postoji</p>
+    </div>
+    <Footer />
   </Layout>
 )
 

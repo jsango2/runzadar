@@ -1,9 +1,18 @@
 module.exports = {
   siteMetadata: {
-    title: `RUNZADAR.COM`,
-    description: ``,
-    author: `Sutra.hr`,
+    title: `Škola trčanja Zadar - Sa osmijehom do cilja`,
+    author: {
+      name: `Sutra.hr`,
+      summary: `Web Dev`,
+    },
+    description: `Prva Škola trčanja u Zadru. Od potpunog početnika do naprednok trkača. Provjerite zašto je Zadar postao grad trčanja. `,
+    siteUrl: `https://wwww.runzadar.com`,
+    image: "../../content/assets/images/p4.png",
+    twitterImage: "../../content/assets/images/twitter-frame.png ",
+    keywords:
+      "Trčanje, trening, vježbanje na otvorenom, utrke, mararton, polumaraton, zadar night run, zadar christmas run, wings for life",
   },
+
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -71,13 +80,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `RunZadar.com`,
+        short_name: `RunZadar`,
         start_url: `/`,
         background_color: `#663399`,
         theme_color: `#6399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/runzadar2.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

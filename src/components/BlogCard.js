@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { makeStyles } from "@material-ui/core/styles"
 import Card from "@material-ui/core/Card"
 import CardActionArea from "@material-ui/core/CardActionArea"
@@ -7,8 +7,7 @@ import CardContent from "@material-ui/core/CardContent"
 import CardMedia from "@material-ui/core/CardMedia"
 import Button from "@material-ui/core/Button"
 import Typography from "@material-ui/core/Typography"
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints"
-import { grey, red } from "@material-ui/core/colors"
+
 import { Link } from "gatsby"
 import readingTime from "reading-time"
 import AccessAlarmsIcon from "@material-ui/icons/AccessAlarms"
@@ -30,10 +29,35 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-export default function BlogCard({ image, title, tags, text, slug, excerpt }) {
+export default function BlogCard({
+  image,
+  title,
+  tags,
+  text,
+  slug,
+  excerpt,
+  date,
+}) {
   const classes = useStyles()
   const stats = readingTime(text).minutes
   const vrijeme = Math.floor(stats)
+  const [datum, setDatum] = useState("-")
+
+  useEffect(() => {
+    let datumPosta = date
+    function formatDate(date) {
+      var d = new Date(date),
+        month = "" + (d.getMonth() + 1),
+        day = "" + d.getDate(),
+        year = d.getFullYear()
+
+      if (month.length < 2) month = "0" + month
+      if (day.length < 2) day = "0" + day
+
+      return [day, month, year].join(".")
+    }
+    setDatum(formatDate(datumPosta))
+  }, [date])
   return (
     <Card className={classes.root}>
       <CardActionArea>
@@ -52,12 +76,13 @@ export default function BlogCard({ image, title, tags, text, slug, excerpt }) {
               justifyContent: "space-between",
             }}
           >
-            <div>
+            <div style={{ display: "flex" }}>
               {tags.edges.map(tag => (
                 <Typography
+                  key={tag.node.name}
                   gutterBottom
                   variant="body2"
-                  component="body2"
+                  component="p"
                   className={classes.tags}
                 >
                   #{tag.node.name}
@@ -84,12 +109,13 @@ export default function BlogCard({ image, title, tags, text, slug, excerpt }) {
           </div>
           <Divider />
           <Typography
+            style={{ marginTop: "15px" }}
             gutterBottom
             variant="h6"
             component="h3"
             dangerouslySetInnerHTML={{ __html: title }}
           ></Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body2" color="textSecondary" component="div">
             <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
           </Typography>
         </CardContent>
@@ -106,6 +132,9 @@ export default function BlogCard({ image, title, tags, text, slug, excerpt }) {
             Pročitaj više
           </Link>
         </Button>
+        <Typography style={{ marginLeft: "auto", fontSize: "0.8rem" }}>
+          {datum}
+        </Typography>
       </CardActions>
     </Card>
   )

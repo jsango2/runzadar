@@ -7,6 +7,7 @@ import BlogHero from "./../components/blogPageHero"
 
 function blog({ data }) {
   const posts = data.wpgraphql.posts.edges
+  console.log(posts)
   return (
     <Layout>
       <BlogHero />
@@ -27,6 +28,7 @@ function blog({ data }) {
             text={post.node.content}
             tags={post.node.tags}
             slug={post.node.slug}
+            date={post.node.date}
             excerpt={post.node.excerpt}
           />
         ))}
@@ -41,13 +43,14 @@ export default blog
 export const query = graphql`
   {
     wpgraphql {
-      posts {
+      posts(first: 50, where: { orderby: { field: DATE, order: ASC } }) {
         edges {
           node {
             id
             title
             slug
             excerpt
+            date
             content
             featuredImage {
               node {
