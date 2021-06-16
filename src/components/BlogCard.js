@@ -60,66 +60,68 @@ export default function BlogCard({
   }, [date])
   return (
     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          component="img"
-          alt="RunZadar.jpg"
-          height="240"
-          image={image.node.sourceUrl}
-          title="RunZadar"
-        ></CardMedia>
-        <CardContent>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            <div style={{ display: "flex" }}>
-              {tags.edges.map(tag => (
-                <Typography
-                  key={tag.node.name}
-                  gutterBottom
-                  variant="body2"
-                  component="p"
-                  className={classes.tags}
-                >
-                  #{tag.node.name}
-                </Typography>
-              ))}
-            </div>
-            <div style={{ display: "flex" }}>
-              <AccessAlarmsIcon
-                style={{
-                  // marginLeft: "30px",
-                  fontSIze: "10px",
-                  color: "grey",
-                  width: "18px",
-                  height: "18px",
-                }}
-              />
+      <Link style={{ textDecoration: "none" }} to={slug}>
+        <CardActionArea>
+          <CardMedia
+            component="img"
+            alt="RunZadar.jpg"
+            height="240"
+            image={image.node.sourceUrl}
+            title="RunZadar"
+          ></CardMedia>
+          <CardContent>
+            <div
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+              }}
+            >
+              <div style={{ display: "flex" }}>
+                {tags.edges.map(tag => (
+                  <Typography
+                    key={tag.node.name}
+                    gutterBottom
+                    variant="body2"
+                    component="p"
+                    className={classes.tags}
+                  >
+                    #{tag.node.name}
+                  </Typography>
+                ))}
+              </div>
+              <div style={{ display: "flex" }}>
+                <AccessAlarmsIcon
+                  style={{
+                    // marginLeft: "30px",
+                    fontSIze: "10px",
+                    color: "grey",
+                    width: "18px",
+                    height: "18px",
+                  }}
+                />
 
-              <div
-                style={{ marginLeft: "6px", fontSize: "14px", color: "grey" }}
-              >
-                {vrijeme + 1} min
+                <div
+                  style={{ marginLeft: "6px", fontSize: "14px", color: "grey" }}
+                >
+                  {vrijeme + 1} min
+                </div>
               </div>
             </div>
-          </div>
-          <Divider />
-          <Typography
-            style={{ marginTop: "15px" }}
-            gutterBottom
-            variant="h6"
-            component="h3"
-            dangerouslySetInnerHTML={{ __html: title }}
-          ></Typography>
-          <Typography variant="body2" color="textSecondary" component="div">
-            <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
-          </Typography>
-        </CardContent>
-      </CardActionArea>
+            <Divider />
+            <Typography
+              style={{ marginTop: "15px" }}
+              gutterBottom
+              variant="h6"
+              component="h3"
+              dangerouslySetInnerHTML={{ __html: title }}
+            ></Typography>
+            <Typography variant="body2" color="textSecondary" component="div">
+              <div dangerouslySetInnerHTML={{ __html: excerpt }}></div>
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Link>
       <CardActions>
         {/* <Button size="small" color="primary">
           <Link style={{ textDecoration: "none" }} to="/">

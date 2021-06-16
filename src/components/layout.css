@@ -968,6 +968,9 @@ pre tt:before,
 pre tt:after {
   content: "";
 }
+.carousel .slide {
+  background-color: unset;
+}
 
 @media only screen and (max-width: 1000px) {
   .ZadarNightRunColumn {
