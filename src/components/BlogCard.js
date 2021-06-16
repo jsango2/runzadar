@@ -65,7 +65,7 @@ export default function BlogCard({
           component="img"
           alt="RunZadar.jpg"
           height="240"
-          image={image ? image.node.sourceUrl : null}
+          image={image.node.sourceUrl}
           title="RunZadar"
         ></CardMedia>
         <CardContent>
