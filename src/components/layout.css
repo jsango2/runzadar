@@ -969,7 +969,7 @@ pre tt:after {
   content: "";
 }
 .carousel .slide {
-  background-color: unset;
+  background-color: transparent !important;
 }
 
 @media only screen and (max-width: 1000px) {
