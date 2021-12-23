@@ -16,8 +16,8 @@ import CrteCesta from "../../images/cestaTestimonial.svg"
 import Zarez from "../../images/Zarez.svg"
 import musapstan1 from "../../images/musapstan1.png"
 import sanja from "../../images/sanja.png"
-import "../../../node_modules/slick-carousel/slick/slick.css"
-import "../../../node_modules/slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 // import { HeroWrap } from "./style.js"
 const NextArrow = ({ currentSlide, slideCount, ...props }) => (

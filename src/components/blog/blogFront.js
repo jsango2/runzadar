@@ -16,8 +16,8 @@ import CrteCesta from "../../images/linijaForm.svg"
 import Slider from "react-slick"
 import Livo from "../../images/STRELICALIVO.svg"
 import Desno from "../../images/STRELICADESNO.svg"
-import "../../../node_modules/slick-carousel/slick/slick.css"
-import "../../../node_modules/slick-carousel/slick/slick-theme.css"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const NextArrow = ({ currentSlide, slideCount, ...props }) => (
   <div {...props}>
