@@ -1,14 +1,42 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.com/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
-
 // Define a template for blog post
 const path = require(`path`)
 // const { createFilePath } = require(`gatsby-source-filesystem`)
+// const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
+
+// exports.createResolvers = async ({
+//   actions,
+//   cache,
+//   createNodeId,
+//   createResolvers,
+//   store,
+//   reporter,
+// }) => {
+//   const { createNode } = actions
+
+//   await createResolvers({
+//     WPGraphQL_MediaItem: {
+//       imageFile: {
+//         type: `File`,
+//         async resolve(source) {
+//           let sourceUrl = source.sourceUrl
+
+//           if (source.mediaItemUrl !== undefined) {
+//             sourceUrl = source.mediaItemUrl
+//           }
+
+//           return await createRemoteFileNode({
+//             url: source.sourceUrl, // if encoding is unnecessary just replace with source.sourceUrl
+//             store,
+//             cache,
+//             createNode,
+//             createNodeId,
+//             reporter,
+//           })
+//         },
+//       },
+//     },
+//   })
+// }
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -32,14 +60,6 @@ exports.createPages = async ({ graphql, actions }) => {
     `
   )
 
-  // if (result.errors) {
-  //   reporter.panicOnBuild(
-  //     `There was an error loading your blog posts`,
-  //     result.errors
-  //   )
-  //   return
-  // }
-
   const posts = result.data.objekt.posts.edges
 
   // Create blog posts pages
@@ -58,59 +78,3 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   }
 }
-
-// exports.onCreateNode = ({ node, actions, getNode }) => {
-//   const { createNodeField } = actions
-
-//   if (node.internal.type === `MarkdownRemark`) {
-//     const value = createFilePath({ node, getNode })
-
-//     createNodeField({
-//       name: `slug`,
-//       node,
-//       value,
-//     })
-//   }
-// }
-
-// exports.createSchemaCustomization = ({ actions }) => {
-//   const { createTypes } = actions
-
-//   // Explicitly define the siteMetadata {} object
-//   // This way those will always be defined even if removed from gatsby-config.js
-
-//   // Also explicitly define the Markdown frontmatter
-//   // This way the "MarkdownRemark" queries will return `null` even when no
-//   // blog posts are stored inside "content/blog" instead of returning an error
-//   createTypes(`
-//     type SiteSiteMetadata {
-//       author: Author
-//       siteUrl: String
-//       social: Social
-//     }
-
-//     type Author {
-//       name: String
-//       summary: String
-//     }
-
-//     type Social {
-//       twitter: String
-//     }
-
-//     type MarkdownRemark implements Node {
-//       frontmatter: Frontmatter
-//       fields: Fields
-//     }
-
-//     type Frontmatter {
-//       title: String
-//       description: String
-//       date: Date @dateformat
-//     }
-
-//     type Fields {
-//       slug: String
-//     }
-//   `)
-// }

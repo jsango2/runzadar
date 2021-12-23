@@ -7,12 +7,14 @@ module.exports = {
     },
     description: `Prva Škola trčanja u Zadru. Od potpunog početnika do naprednok trkača. Provjerite zašto je Zadar postao grad trčanja. `,
     siteUrl: `https://wwww.runzadar.com`,
-    image: "../../content/assets/images/p4.png",
+    image: "../../content/assets/images/hero.png",
     twitterImage: "../../content/assets/images/twitter-frame.png ",
     keywords:
       "Trčanje, trening, vježbanje na otvorenom, utrke, mararton, polumaraton, zadar night run, zadar christmas run, wings for life",
   },
-
+  flags: {
+    DEV_SSR: false,
+  },
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
@@ -22,6 +24,8 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-smoothscroll`,
@@ -37,11 +41,26 @@ module.exports = {
         url: "https://sutrashop.com.hr/graphql",
       },
     },
-
+    // {
+    //   resolve: `gatsby-source-wordpress`,
+    //   options: {
+    //     url: "http://sutrashop.com.hr/graphql",
+    //   },
+    // },
+    // {
+    //   resolve: "gatsby-source-wordpress",
+    //   options: {
+    //     baseUrl: "sutrashop.com.hr/graphql",
+    //     protocol: "http",
+    //     hostingWPCOM: false,
+    //     useACF: true,
+    //     verboseOutput: true,
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
-        threshold: 0.07, // Percentage of an element's area that needs to be visible to launch animation
+        threshold: 0.1, // Percentage of an element's area that needs to be visible to launch animation
         once: true, // Defines if animation needs to be launched once
         disable: false, // Flag for disabling animations
 
@@ -54,21 +73,22 @@ module.exports = {
         exitEventName: "sal:out", // Exit event name
       },
     },
-    // {
-    //   resolve: `gatsby-plugin-google-fonts`,
-    //   options: {
-    //     fonts: [`Montserrat\:300,500,700`],
-    //     display: "swap",
-    //   },
-    // },
+
     {
-      resolve: "gatsby-plugin-web-font-loader",
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        google: {
-          families: ["Montserrat:300,500,700"],
-        },
+        fonts: [`Montserrat\:400,600,700,800,900`, `Bangers`],
+        display: "swap",
       },
     },
+    // {
+    //   resolve: "gatsby-plugin-web-font-loader",
+    //   options: {
+    //     google: {
+    //       families: ["Montserrat:300,500,700,900", "Bangers"],
+    //     },
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
@@ -86,7 +106,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#6399`,
         display: `minimal-ui`,
-        icon: `src/images/runzadar2.png`, // This path is relative to the root of the site.
+        icon: `src/images/hero.png`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

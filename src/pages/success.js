@@ -1,7 +1,6 @@
 import React from "react"
-import Logo from "../images/logoRunZd.png"
-import Layout from "./../components/layout"
-import Footer from "./../components/footer"
+// import Logo from "../images/logoRunZd.png"
+import Layout from "./../components/layout/layout"
 
 function success() {
   return (
@@ -17,7 +16,7 @@ function success() {
             alignItems: "center",
           }}
         >
-          <img src={Logo} width="80%" alt="logo" />
+          {/* <img src={Logo} width="80%" alt="logo" /> */}
           <div style={{ textAlign: "center", marginTop: "30px" }}>
             <h2>Hvala Vam na prijavi!</h2>
             <p>
@@ -26,7 +25,6 @@ function success() {
           </div>
         </div>
       </div>
-      <Footer />
     </Layout>
   )
 }

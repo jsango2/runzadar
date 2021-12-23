@@ -1,0 +1,110 @@
+import React from "react"
+import {
+  WrapAll,
+  Card,
+  WrapTestimonial,
+  Left,
+  Right,
+  Text,
+  Ime,
+} from "./style.js"
+import Slider from "react-slick"
+import Swish from "../../images/Swish.svg"
+import Livo from "../../images/STRELICALIVO.svg"
+import Desno from "../../images/STRELICADESNO.svg"
+import CrteCesta from "../../images/cestaTestimonial.svg"
+import Zarez from "../../images/Zarez.svg"
+import musapstan1 from "../../images/musapstan1.png"
+import sanja from "../../images/sanja.png"
+import "../../../node_modules/slick-carousel/slick/slick.css"
+import "../../../node_modules/slick-carousel/slick/slick-theme.css"
+
+// import { HeroWrap } from "./style.js"
+const NextArrow = ({ currentSlide, slideCount, ...props }) => (
+  <div {...props}>
+    <Desno />
+  </div>
+)
+const PrevArrow = ({ currentSlide, slideCount, ...props }) => (
+  <div {...props}>
+    <Livo />
+  </div>
+)
+
+const Testimonial = () => {
+  const settings = {
+    // arrows: true,
+    dots: true,
+    infinite: true,
+    fade: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+
+    responsive: [
+      {
+        breakpoint: 450,
+        settings: {
+          dots: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+          lazyLoad: true,
+          arrows: false,
+          speed: 500,
+        },
+      },
+    ],
+  }
+  return (
+    <WrapAll>
+      <CrteCesta
+        style={{
+          position: "absolute",
+          top: "120px",
+        }}
+      />
+      <Slider {...settings}>
+        <WrapTestimonial>
+          <Card>
+            <Left style={{ backgroundImage: `url(${musapstan1})` }}></Left>
+            <Right>
+              <Zarez className="zarezTestimonial" />
+              <Text>
+                {" "}
+                "Škola trčanja mi je u potpunosti promijenila lifestyle. Postao
+                sam aktivna osoba, sportaš rekreativac, trkač na duge pruge, a
+                prije samo 3 godine bio sam bez energije, bez snage i što je
+                najvažnije bez poleta i elana. "
+              </Text>
+              <Ime>Mate (47)</Ime>
+            </Right>
+            <Swish style={{ position: "absolute", right: "0px" }} />
+          </Card>
+        </WrapTestimonial>
+        <WrapTestimonial>
+          <Card>
+            <Left style={{ backgroundImage: `url(${sanja})` }}></Left>
+            <Right>
+              <Zarez className="zarezTestimonial" />
+
+              <Text>
+                {" "}
+                "Škola trčanja mi je u potpunosti promijenila lifestyle. Postao
+                sam aktivna osoba, sportaš rekreativac, trkač na duge pruge, a
+                prije samo 3 godine bio sam bez energije, bez snage i što je
+                najvažnije bez poleta i elana. "
+              </Text>
+              <Ime>Sanja (53)</Ime>
+            </Right>
+            <Swish style={{ position: "absolute", right: "0px" }} />
+          </Card>
+        </WrapTestimonial>
+      </Slider>
+    </WrapAll>
+  )
+}
+
+export default Testimonial

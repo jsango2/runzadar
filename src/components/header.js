@@ -1,141 +1,67 @@
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
-import Headroom from "react-headroom"
-import scrollTo from "gatsby-plugin-smoothscroll"
-import styled from "styled-components"
-import { Nav, Navbar } from "react-bootstrap"
+// import Headroom from "react-headroom"
+// import scrollTo from "gatsby-plugin-smoothscroll"
+// import styled from "styled-components"
+import { GiHamburgerMenu } from "react-icons/gi"
+import Button from "../components/button/button"
+import MeniMobile from "./meni/meniMobile"
 
-const NavigationBar = styled.div`
-  position: relative;
-  z-index: 999;
-  left: 0%;
-  top: 0%;
-  right: 0%;
-  bottom: auto;
-  display: flex;
-  height: 60px;
-  /* align-items: center; */
-  max-width: 100%;
-  padding-right: 26px;
-  justify-content: flex-end;
-  align-items: center;
-  flex: 0 auto;
-  background-color: #fff;
-  opacity: 1;
-  -webkit-box-shadow: 3px 4px 15px -4px rgba(0, 0, 0, 0.13);
-  box-shadow: 3px 4px 15px -4px rgba(0, 0, 0, 0.13);
-  background: #ffffff;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  a {
-    color: #0d3151;
-  }
-`
-const NavLinks = styled.div`
-  margin-left: auto;
-  /* text-decoration: none; */
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 600px;
-  font-size: 0.7rem;
-  @media screen and (max-width: 1000px) {
-    display: none;
-  }
-`
-const Hamburger = styled.div`
-  cursor: pointer;
-  color: #0d3151;
-
-  @media screen and (min-width: 1000px) {
-    display: none;
-  }
-`
-
-const Header = ({ siteTitle }) => (
-  <Headroom
-    style={{
-      WebkitTransition: "all .5s ease-in-out",
-      Transition: "all .5s ease-in-out",
-      transition: "all .5s ease-in-out",
-      zIndex: "999",
-    }}
-  >
+const Header = ({ siteTitle }) => {
+  const [isOpen, setIsOpen] = useState(false)
+  // <Headroom
+  //   style={{
+  //     WebkitTransition: "all .5s ease-in-out",
+  //     Transition: "all .5s ease-in-out",
+  //     transition: "all .5s ease-in-out",
+  //     zIndex: "999",
+  //     height: "65px",
+  //   }}
+  // >
+  return (
     <header>
-      <Navbar bg="light" variant="light" expand="lg">
-        <Navbar.Brand>
-          {/* <img
-            alt=""
-            src={Logo}
-            width="50"
-            height="40"
-            className="d-inline-block align-top"
-          />{" "} */}
-          <Link style={{ color: "grey", fontWeight: "500" }} to="/">
-            Škola trčanja Zadar
+      <div className="navBar">
+        <div>
+          <Link to="/" className="navLink navTitle">
+            ŠKOLA TRČANJA ZADAR
           </Link>
-        </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="navlinks ml-auto">
-            <Link style={{ color: "grey" }} to="../">
-              Home
-            </Link>
+        </div>
 
-            <Link
-              style={{ color: "grey" }}
-              to="/"
-              onClick={() => scrollTo("#onama")}
-            >
-              O nama
-            </Link>
-            <Link style={{ color: "grey" }} to="/blog">
+        <MeniMobile isOpen={isOpen} />
+        <div>
+          <GiHamburgerMenu
+            className="hamburgerMenu"
+            onClick={() => {
+              setIsOpen(() => !isOpen)
+              // blockScroll()
+            }}
+          />
+
+          <div className="navLinks">
+            <Link className="navLink" to="/blog">
               Blog
             </Link>
-            <Link
-              style={{ color: "grey" }}
-              to="/"
-              onClick={() => scrollTo("#zastoSkola")}
-            >
-              Zašto Škola trčanja
-            </Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
-      {/* <NavigationBar>
-        <div className="container-50">
-          <div className="logoNavbar">
-            <Link to="/" className="headerTitle">
-              {siteTitle}
-            </Link>
-          </div>
-          <NavLinks>
-            <div className="navigation-link" onClick={() => scrollTo("#home")}>
-              <Link to="/">HOME</Link>
-            </div>
 
-            <div className="navigation-link">
-              <Link to="/o-nama">O NAMA</Link>
-            </div>
-            <div className="navigation-link">
-              <Link to="/blog">BLOG</Link>
-            </div>
-            <div className="navigation-link prijava">
-              <Link to="/prijava">PRIJAVA</Link>
-            </div>
-            <div className="navigation-link">
-              <Link to="/o-nama">ZAŠTO ŠKOLA TRČANJA</Link>
-            </div>
-          </NavLinks>
-          <Hamburger>
-            <GiHamburgerMenu />
-          </Hamburger>
+            <a className="navLink" href="http://www.zadarnight.run">
+              ZadarNight.run
+            </a>
+            <Button
+              title="Prijava"
+              width="81"
+              height="40"
+              colorText="black"
+              fontSize="16"
+              fontWeight="600"
+            />
+          </div>
         </div>
-      </NavigationBar> */}
+      </div>
     </header>
-  </Headroom>
-)
+
+    // </Headroom>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,

@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react"
 import { graphql } from "gatsby"
-import SEO from "../components/seo"
-import Layout from "./../components/layout"
-import Footer from "./../components/footer"
-import Typography from "@material-ui/core/Typography"
-import { Divider } from "@material-ui/core"
+import Seo from "../components/seo"
+import Layout from "./../components/layout/layout"
+import { Naslov, WrapNaslovButton, Overlay, Text } from "./style.js"
+import KosaCrta from "../images/kosacrta.svg"
+
+import Button from "../components/button/button"
 
 const BlogPost = ({ data }) => {
   // ------visibility lazy loading------------
   // --------------------------------------
   const post = data.wpgraphql.post
   const [datum, setDatum] = useState("-")
-
+  console.log(data)
   useEffect(() => {
     let datumPosta = post.date
     function formatDate(date) {
@@ -30,37 +31,54 @@ const BlogPost = ({ data }) => {
   return (
     <>
       <Layout>
+        <Seo
+          title={post.title}
+          description="RunZadar blog o svemu povezanom sa treningom trčanja"
+        />
         <div
           style={{
             position: "relative",
             width: "100%",
             height: "450px",
             backgroundImage: `url(${data.wpgraphql.post.featuredImage.node.sourceUrl})`,
-            backgroundPosition: "50% 30%",
+            backgroundPosition: "50% 50%",
             backgroundSize: "cover ",
             zIndex: "1",
+            borderRadius: "39px 39px 0 0 ",
+            display: "flex",
+            justifyContent: "center ",
           }}
-        ></div>
-        <div className="container">
+        >
+          <Overlay />{" "}
+          <WrapNaslovButton>
+            <Naslov>
+              <KosaCrta
+                style={{
+                  height: "50px",
+                  width: "50px",
+                  position: "absolute",
+                  transform: "translate(-45px,20px",
+                }}
+              />
+              {post.title}{" "}
+            </Naslov>
+          </WrapNaslovButton>
+        </div>
+        <div
+          style={{
+            margin: "20px auto 0 auto",
+            width: "868px",
+            fontSize: "21px",
+          }}
+        >
           <div style={{ marginTop: "2rem", display: "flex" }}>
             {post.tags.edges.map(tag => (
-              <Typography
-                key={tag.node.name}
-                gutterBottom
-                variant="body2"
-                component="p"
-                style={{ margin: "4px", color: "grey" }}
-              >
+              <div key={tag.node.name} style={{ margin: "4px", color: "grey" }}>
                 #{tag.node.name}
-              </Typography>
+              </div>
             ))}
           </div>
-          <Typography
-            style={{ marginTop: "2rem", fontSize: "2rem" }}
-            gutterBottom
-          >
-            {post.title}{" "}
-          </Typography>
+
           <div
             style={{
               display: "flex",
@@ -68,25 +86,22 @@ const BlogPost = ({ data }) => {
               alignItems: "center",
             }}
           >
-            <Typography style={{ fontSize: "0.8rem" }}>
-              Autor: RunZadar.com
-            </Typography>
+            <div style={{ fontSize: "0.8rem" }}>Autor: RunZadar.com</div>
             <div style={{ fontSize: "0.8rem", marginRight: "1rem" }}>
               {datum}
             </div>
           </div>
-          <Divider />
-          <div style={{ marginTop: "20px" }}>
-            <Typography
-              gutterBottom
-              variant="body1"
-              component="div"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            ></Typography>
+          <div />
+          <div
+            style={{
+              margin: "60px auto 0 auto",
+              width: "100%",
+              fontSize: "21px",
+            }}
+          >
+            <Text dangerouslySetInnerHTML={{ __html: post.content }}></Text>
           </div>
         </div>
-
-        <Footer />
       </Layout>
     </>
   )
