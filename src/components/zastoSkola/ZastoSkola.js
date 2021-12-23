@@ -14,8 +14,8 @@ import {
   Clanarina,
   Overlay,
 } from "./style.js"
-import LocationIcon from "../../images/location.svg"
-import KosaCrta from "../../images/kosacrta.svg"
+import LocationIcon from "../../svg/location.svg"
+import KosaCrta from "../../svg/kosacrta.svg"
 import { Parallax } from "react-scroll-parallax"
 import nightRunZrake from "../../images/Vector.png"
 

@@ -1,10 +1,10 @@
 import React, { useState } from "react"
 import { WrapAll, Naslov, WrapTreneri, Trener, Naslov2, Text } from "./style.js"
-import Pozadina from "../../images/pozadinTreneri.svg"
-import LinijaUtrkeZuta from "../../images/linijautrkezuta.svg"
+import Pozadina from "../../svg/pozadinTreneri.svg"
+import LinijaUtrkeZuta from "../../svg/linijautrkezuta.svg"
 import Jure from "../../images/jure.png"
 import Tuta from "../../images/tuta.png"
-import KosaCrta from "../../images/kosacrta.svg"
+import KosaCrta from "../../svg/kosacrta.svg"
 import { Parallax } from "react-scroll-parallax"
 import Tilt from "react-parallax-tilt"
 

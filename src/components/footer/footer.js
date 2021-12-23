@@ -1,7 +1,7 @@
 import React from "react"
 import { WrapAll, Overlay, Social } from "./style.js"
-import FooterBg from "../../images/footerbg.svg"
-import Runzadar from "../../images/runzadar.svg"
+import FooterBg from "../../svg/footerbg.svg"
+import Runzadar from "../../svg/runzadar.svg"
 
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"

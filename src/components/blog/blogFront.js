@@ -12,10 +12,10 @@ import {
 } from "./style.js"
 import { Link } from "gatsby"
 
-import CrteCesta from "../../images/linijaForm.svg"
+import CrteCesta from "../../svg/linijaForm.svg"
 import Slider from "react-slick"
-import Livo from "../../images/STRELICALIVO.svg"
-import Desno from "../../images/STRELICADESNO.svg"
+import Livo from "../../svg/STRELICALIVO.svg"
+import Desno from "../../svg/STRELICADESNO.svg"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 

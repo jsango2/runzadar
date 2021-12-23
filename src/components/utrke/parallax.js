@@ -8,8 +8,8 @@ import {
   Text,
   Ime,
 } from "./style.js"
-import Livo from "../../images/STRELICALIVO.svg"
-import Desno from "../../images/STRELICADESNO.svg"
+import Livo from "../../svg/STRELICALIVO.svg"
+import Desno from "../../svg/STRELICADESNO.svg"
 
 import musapstan1 from "../../images/musapstan1.png"
 import sanja from "../../images/sanja.png"

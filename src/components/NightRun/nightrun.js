@@ -3,7 +3,7 @@ import Lottie from "lottie-react"
 import { Text, HeroWrap, WrapLogoText } from "./style.js"
 import Button from "../button/button"
 import Video from "../../video/nightrun.mp4"
-import Logo from "../../images/nightrunlogo-01.svg"
+import Logo from "../../svg/nightrunlogo-01.svg"
 import { IoIosArrowForward } from "react-icons/io"
 
 const NightRun = () => {

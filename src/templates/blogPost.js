@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import Seo from "../components/seo"
 import Layout from "./../components/layout/layout"
 import { Naslov, WrapNaslovButton, Overlay, Text } from "./style.js"
-import KosaCrta from "../images/kosacrta.svg"
+import KosaCrta from "../svg/kosacrta.svg"
 
 import Button from "../components/button/button"
 

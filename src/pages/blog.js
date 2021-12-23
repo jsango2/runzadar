@@ -4,7 +4,7 @@ import { graphql, Link } from "gatsby"
 import Seo from "../components/seo"
 import Sunset from "../images/sunset.png"
 
-import KosaCrta from "../images/kosacrta.svg"
+import KosaCrta from "../svg/kosacrta.svg"
 import Button from "../components/button/button"
 import styled from "styled-components"
 

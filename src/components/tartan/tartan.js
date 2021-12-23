@@ -2,7 +2,7 @@ import React from "react"
 import { Naslov, Overlay, WrapAll } from "./style.js"
 import { graphql, useStaticQuery } from "gatsby"
 
-import LocationIcon from "../../images/location.svg"
+import LocationIcon from "../../svg/location.svg"
 import slikaTartan from "../../images/slikatartana.png"
 
 import BackgroundImage from "gatsby-background-image"

@@ -1,6 +1,6 @@
 import React from "react"
 import { WrapAll, Naslov } from "./style.js"
-import CrteCesta from "../../images/linijaForm.svg"
+import CrteCesta from "../../svg/linijaForm.svg"
 
 const Ponosni = () => {
   return (
