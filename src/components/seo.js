@@ -82,7 +82,10 @@ const SEO = ({ description, lang, meta, title }) => {
             content: keywords,
           },
         ].concat(meta)}
-      />
+      >
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"></script>
+      </Helmet>
     </>
   )
 }

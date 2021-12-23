@@ -8,7 +8,6 @@ import {
   Text,
   Ime,
 } from "./style.js"
-import Slider from "react-slick"
 import Swish from "../../svg/Swish.svg"
 import Livo from "../../svg/STRELICALIVO.svg"
 import Desno from "../../svg/STRELICADESNO.svg"
@@ -16,8 +15,10 @@ import CrteCesta from "../../svg/cestaTestimonial.svg"
 import Zarez from "../../svg/Zarez.svg"
 import musapstan1 from "../../images/musapstan1.png"
 import sanja from "../../images/sanja.png"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import SEO from "../seo.js"
+import Slider from "react-slick"
+// import "slick-carousel/slick/slick.css"
+// import "slick-carousel/slick/slick-theme.css"
 
 // import { HeroWrap } from "./style.js"
 const NextArrow = ({ currentSlide, slideCount, ...props }) => (
@@ -60,6 +61,7 @@ const Testimonial = () => {
   }
   return (
     <WrapAll>
+      <SEO />
       <CrteCesta
         style={{
           position: "absolute",

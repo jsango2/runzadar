@@ -13,11 +13,12 @@ import {
 import { Link } from "gatsby"
 
 import CrteCesta from "../../svg/linijaForm.svg"
-import Slider from "react-slick"
 import Livo from "../../svg/STRELICALIVO.svg"
 import Desno from "../../svg/STRELICADESNO.svg"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+import Slider from "react-slick"
+import SEO from "../seo.js"
+// import "slick-carousel/slick/slick.css"
+// import "slick-carousel/slick/slick-theme.css"
 
 const NextArrow = ({ currentSlide, slideCount, ...props }) => (
   <div {...props}>
@@ -59,6 +60,7 @@ const BlogFront = posts => {
   }
   return (
     <WrapAll>
+      <SEO />
       <CrteCesta
         style={{
           position: "absolute",

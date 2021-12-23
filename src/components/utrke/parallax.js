@@ -13,9 +13,10 @@ import Desno from "../../svg/STRELICADESNO.svg"
 
 import musapstan1 from "../../images/musapstan1.png"
 import sanja from "../../images/sanja.png"
+import SEO from "../seo.js"
 import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+// import "slick-carousel/slick/slick.css"
+// import "slick-carousel/slick/slick-theme.css"
 
 const NextArrow = ({ currentSlide, slideCount, ...props }) => (
   <div {...props}>
@@ -59,6 +60,7 @@ const ParallaxComp = () => {
 
   return (
     <WrapAll>
+      <SEO />
       <Slider {...settings}>
         <WrapTestimonial>
           <Card>

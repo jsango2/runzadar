@@ -3,9 +3,6 @@ import { WrapAll, Overlay, Social } from "./style.js"
 import FooterBg from "../../svg/footerbg.svg"
 import Runzadar from "../../svg/runzadar.svg"
 
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-
 const Footer = posts => {
   return (
     <WrapAll>
