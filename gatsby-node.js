@@ -1,42 +1,4 @@
-// Define a template for blog post
 const path = require(`path`)
-// const { createFilePath } = require(`gatsby-source-filesystem`)
-// const { createRemoteFileNode } = require(`gatsby-source-filesystem`)
-
-// exports.createResolvers = async ({
-//   actions,
-//   cache,
-//   createNodeId,
-//   createResolvers,
-//   store,
-//   reporter,
-// }) => {
-//   const { createNode } = actions
-
-//   await createResolvers({
-//     WPGraphQL_MediaItem: {
-//       imageFile: {
-//         type: `File`,
-//         async resolve(source) {
-//           let sourceUrl = source.sourceUrl
-
-//           if (source.mediaItemUrl !== undefined) {
-//             sourceUrl = source.mediaItemUrl
-//           }
-
-//           return await createRemoteFileNode({
-//             url: source.sourceUrl, // if encoding is unnecessary just replace with source.sourceUrl
-//             store,
-//             cache,
-//             createNode,
-//             createNodeId,
-//             reporter,
-//           })
-//         },
-//       },
-//     },
-//   })
-// }
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions

@@ -5,21 +5,15 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@material-ui/core": "^4.12.3",
-    "@material-ui/icons": "^4.11.2",
     "@react-spring/parallax": "^9.3.1",
     "babel-plugin-styled-components": "^1.13.3",
-    "body-parser": "^1.19.1",
     "bootstrap": "^4.6.1",
-    "cors": "^2.8.5",
     "dotenv": "^10.0.0",
-    "express": "^4.17.1",
     "gatsby": "^3.14.5",
     "gatsby-background-image": "^1.5.3",
     "gatsby-image": "^2.11.0",
     "gatsby-link": "^3.13.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-image": "^2.3.0",
     "gatsby-plugin-manifest": "^3.4.0",
     "gatsby-plugin-offline": "^3.10.2",
     "gatsby-plugin-react-helmet": "^4.4.0",
@@ -28,7 +22,6 @@
     "gatsby-plugin-sharp": "^3.14.3",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-plugin-styled-components": "^4.4.0",
-    "gatsby-plugin-typescript": "^4.4.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-responsive-iframe": "^2.11.0",
     "gatsby-source-filesystem": "^3.4.0",
@@ -61,8 +54,7 @@
   },
   "devDependencies": {
     "gatsby-plugin-graphql-image": "^1.0.1",
-    "prettier": "2.1.2",
-    "typescript": "^4.5.4"
+    "prettier": "2.1.2"
   },
   "keywords": [
     "gatsby"
